@@ -2,7 +2,9 @@ import { http } from "./http";
 import "./websocket/client";
 import "./websocket/admin";
 
-http.listen(3333, () => console.log("Server is running on port 3333"));
+const PORT = process.env.PORT || 3333
+
+http.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
 
 /**
  * GET = Buscas
